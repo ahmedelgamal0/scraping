@@ -1,4 +1,4 @@
-# Scrapy settings for WordlOmeter project
+# Scrapy settings for imdb project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -7,14 +7,15 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'WordlOmeter'
+BOT_NAME = 'imdb'
 
-SPIDER_MODULES = ['WordlOmeter.spiders']
-NEWSPIDER_MODULE = 'WordlOmeter.spiders'
+SPIDER_MODULES = ['imdb.spiders']
+NEWSPIDER_MODULE = 'imdb.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/109.0"
+#USER_AGENT = 'imdb (+http://www.yourdomain.com)'
+
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 
@@ -36,20 +37,21 @@ ROBOTSTXT_OBEY = True
 #TELNETCONSOLE_ENABLED = False
 
 # Override the default request headers:
-DEFAULT_REQUEST_HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/109.0"
-}
+#DEFAULT_REQUEST_HEADERS = {
+#   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+#   'Accept-Language': 'en',
+#}
 
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'WordlOmeter.middlewares.WordlometerSpiderMiddleware': 543,
+#    'imdb.middlewares.ImdbSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'WordlOmeter.middlewares.WordlometerDownloaderMiddleware': 543,
+#    'imdb.middlewares.ImdbDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -61,7 +63,7 @@ DEFAULT_REQUEST_HEADERS = {
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'WordlOmeter.pipelines.WordlometerPipeline': 300,
+#    'imdb.pipelines.ImdbPipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
